@@ -90,7 +90,7 @@ public class AwsAsgUtil {
     private AwsAsgUtil() {
         String region = DiscoveryManager.getInstance().getEurekaClientConfig()
                 .getRegion();
-        client.setEndpoint("autoscaling." + region + ".amazonaws.com");
+        client.setEndpoint("http://10.254.254.3:8773/services/Autoscaling");
         timer.schedule(getASGUpdateTask(),
                 eurekaConfig.getASGUpdateIntervalMs(),
                 eurekaConfig.getASGUpdateIntervalMs());

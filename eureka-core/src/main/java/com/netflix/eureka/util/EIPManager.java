@@ -390,7 +390,7 @@ public class EIPManager {
         String region = DiscoveryManager.getInstance().getEurekaClientConfig()
         .getRegion();
         region = region.trim().toLowerCase();
-        ec2Service.setEndpoint("ec2." + region + ".amazonaws.com");
+        ec2Service.setEndpoint("http://10.254.254.3:8773/services/Eucalyptus");
         return ec2Service;
     }
 }
